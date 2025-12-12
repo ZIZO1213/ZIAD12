@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رسالة خاصة لكِ ❤️</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <div class="container">
+        <div class="message-box">
+            <h2 id="greeting">أهلاً يا حبيبتي، هذا الكود مُعد خصيصاً لكِ!</h2>
+            <p>الرجاء إدخال كلمة السر الخاصة:</p>
+            <input type="password" id="secretPassword" placeholder="كلمة السر">
+            <button onclick="checkPassword()">ادخلي</button>
+        </div>
+
+        <div class="secret-content" id="secretContent">
+            <div class="heart-animation">
+                <span class="heart"></span>
+                <span class="heart"></span>
+                <span class="heart"></span>
+            </div>
+            
+            <h1>💕 رسالة خاصة من قلبي إليكِ 💕</h1>
+            <p>إلى أجمل إنسانة في حياتي، **أنتِ كل شيء بالنسبة لي**.</p>
+            <p>كل نبضة في قلبي تهتف باسمك. أحبك أكثر مما تتخيلين!</p>
+            
+            <div class="signature">
+                <span>من حبيبك ❤️</span>
+            </div>
+            
+            <div class="heart-animation right">
+                <span class="heart"></span>
+                <span class="heart"></span>
+                <span class="heart"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>
