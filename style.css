@@ -1,0 +1,116 @@
+body {
+    background-color: #fce4ec; /* خلفية بلون وردي فاتح جداً */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #4a148c; /* لون بنفسجي غامق للنصوص */
+    text-align: center;
+}
+
+.container {
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    max-width: 500px;
+    width: 90%;
+}
+
+.message-box {
+    padding: 20px;
+}
+
+#secretPassword, button {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ff80ab; /* وردي متوسط */
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #e91e63; /* وردي داكن/أحمر */
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c2185b;
+}
+
+/* إخفاء المحتوى السري في البداية */
+#secretContent {
+    display: none;
+    padding-top: 20px;
+}
+
+.secret-content h1 {
+    color: #d81b60; /* لون أحمر/وردي قوي */
+    margin-bottom: 20px;
+}
+
+.signature {
+    margin-top: 30px;
+    font-style: italic;
+    font-size: 1.1em;
+    color: #880e4f;
+}
+
+/* تصميم وتحريك القلوب */
+.heart-animation {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    position: relative;
+}
+
+.heart-animation.right {
+    flex-direction: row-reverse;
+}
+
+.heart {
+    display: inline-block;
+    color: #ff4081; /* لون القلب */
+    font-size: 30px;
+    animation: pulse 1.5s infinite ease-in-out alternate, floatUp 4s infinite ease-out;
+    opacity: 0;
+    position: relative;
+}
+
+.heart:nth-child(1) {
+    animation-delay: 0s, 0s;
+    left: -15px;
+}
+
+.heart:nth-child(2) {
+    animation-delay: 0.5s, 1s;
+}
+
+.heart:nth-child(3) {
+    animation-delay: 1s, 2s;
+    left: 15px;
+}
+
+/* لكي يظهر رمز القلب */
+.heart:before {
+    content: "❤️"; /* رمز القلب */
+}
+
+/* حركة نبض القلب */
+@keyframes pulse {
+    from { transform: scale(0.9); opacity: 0.8; }
+    to { transform: scale(1.1); opacity: 1; }
+}
+
+/* حركة طفو القلوب للأعلى */
+@keyframes floatUp {
+    0% { transform: translateY(0) scale(1); opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { transform: translateY(-50px) scale(0.8); opacity: 0; }
+}
